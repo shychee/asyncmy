@@ -5,6 +5,7 @@
 ### 0.2.12
 
 - Performence improvement， details see [benchmark/README.md](benchmark/README.md).
+- Fix `AttributeError: 'Connection' object has no attribute 'ssl'` in `sha256_password` auth branch. (#147)
 
 ### 0.2.11
 
