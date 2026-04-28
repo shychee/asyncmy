@@ -822,7 +822,7 @@ class Connection:
                 authresp = auth.scramble_caching_sha2(self._password, self.salt)
         elif self._auth_plugin_name == "sha256_password":
             plugin_name = b"sha256_password"
-            if self.ssl and self.server_capabilities & SSL:
+            if self._ssl_context and self.server_capabilities & SSL:
                 authresp = self._password + b"\0"
             elif self._password:
                 authresp = b"\1"  # request public key
